@@ -1,4 +1,5 @@
 // Add your javascript here
+import "astro:transitions/client"
 
 window.darkMode = false;
 
@@ -14,7 +15,9 @@ const stickyClassesContainer = [
 const unstickyClassesContainer = ["border-transparent"];
 let headerElement = null;
 
+
 document.addEventListener("DOMContentLoaded", () => {
+  console.log("DOMContentLoaded");
 	headerElement = document.getElementById("header");
 
 	if (
@@ -32,16 +35,16 @@ document.addEventListener("DOMContentLoaded", () => {
 	mobileMenuFunctionality();
 });
 
-// window.toggleDarkMode = function(){
-//     document.documentElement.classList.toggle('dark');
-//     if(document.documentElement.classList.contains('dark')){
-//         localStorage.setItem('dark_mode', true);
-//         window.darkMode = true;
-//     } else {
-//         window.darkMode = false;
-//         localStorage.setItem('dark_mode', false);
-//     }
-// }
+window.toggleDarkMode = () => {
+    document.documentElement.classList.toggle('dark');
+    if(document.documentElement.classList.contains('dark')){
+        localStorage.setItem('dark_mode', true);
+        window.darkMode = true;
+    } else {
+        window.darkMode = false;
+        localStorage.setItem('dark_mode', false);
+    }
+}
 
 window.stickyHeaderFuncionality = () => {
 	window.addEventListener("scroll", () => {

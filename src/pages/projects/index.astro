@@ -1,8 +1,10 @@
 ---
-import projects from "../collections/projects.json";
-import PageHeading from "../components/page-heading.astro";
-import Project from "../components/project.astro";
-import Layout from "../layouts/main.astro";
+import projects from '../../collections/projects.json';
+import PageHeading from '../../components/page-heading.astro';
+import Project from '../../components/project.astro';
+import Layout from '../../layouts/main.astro';
+import { getIcon } from '../../utils/getIconFromCdn';
+
 ---
 
 <Layout title="My Projects">
@@ -21,10 +23,13 @@ import Layout from "../layouts/main.astro";
             <Project
               name={project.name}
               description={project.description}
-              image={project.image}
+              image={getIcon(project.frameworks[0] ?? project.languages[0])}              
               url={project.url}
+              languages={project.languages}
+              frameworks={project.frameworks}
+              technologies={project.technologies}
             />
-          )
+          );
         })
       }
     </div>

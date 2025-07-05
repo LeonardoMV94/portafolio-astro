@@ -1,12 +1,10 @@
 ---
-import Button from "../components/button.astro";
 import Projects from "../components/home/projects.astro";
 import Separator from "../components/home/separator.astro";
-import Writings from "../components/home/writings.astro";
 import Layout from "../layouts/main.astro";
 ---
 
-<Layout title="Kai">
+<Layout title="Leonardo Muñoz" description="Full-Stack Developer">
   <div
     class="relative z-20 w-full max-w-4xl mx-auto mt-16 px-7 md:mt-24 lg:mt-32 xl:px-0"
   >
@@ -15,12 +13,12 @@ import Layout from "../layouts/main.astro";
         <h1
           class="mb-5 text-4xl font-bold leading-tight md:text-4xl lg:text-6xl dark:text-white"
         >
-          Hello, I'm Kai.
+          Hello, I'm Leonardo Muñoz.
         </h1>
         <p class="mb-6 text-base text-neutral-600 dark:text-neutral-400">
-          I'm a front-end programmer living in Nanjing. <br
+          I'm a Fullstack Developer in Chile. <br
             class="hidden lg:block"
-          />I focus on Web development.
+          />I focus on Web Applications development.
         </p>
         <p class="mb-2 font-semibold text-neutral-800 dark:text-neutral-200">
           I can help you out with:
@@ -29,12 +27,14 @@ import Layout from "../layouts/main.astro";
           class="py-2 space-y-[3px] text-sm list-disc list-inside text-neutral-500 dark:text-neutral-400"
         >
           <li>Vue.js Development</li>
-          <li>React.js Development</li>
+          <li>Nest.js Development</li>
           <li>Node.js Development</li>
-          <li>Website Design</li>
+          <li>Dockerize your App</li>
+          <li>Monitorize your App</li>
+          <li>Deploy your App</li>
           <li>and more...</li>
         </ul>
-        <Button text="Follow me on 𝕏" link="https://x.com/0xKaiBi" />
+        <!-- <Button text="Follow me on 𝕏" link="https://x.com/0xKaiBi" /> -->
       </div>
       <div
         class="relative justify-end hidden w-full mt-10 md:flex md:pl-10 md:w-1/2 md:mt-0 md:translate-y-4 xl:translate-y-0"
@@ -71,6 +71,6 @@ import Layout from "../layouts/main.astro";
 
   <Separator text="Check out my projects" />
   <Projects />
-  <Separator text="Some of my writing" />
-  <Writings />
+  <!-- <Separator text="Some of my writing" /> -->
+  <!-- <Writings /> -->
 </Layout>
