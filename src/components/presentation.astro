@@ -1,0 +1,102 @@
+---
+import { getIcon } from "../utils/getIconFromCdn";
+
+const name = "Leonardo Muñoz";
+const languages = ["Vue.js", "Nestjs", "Node.js"];
+---
+<div class="flex flex-col md:flex-row items-center md:items-start justify-center gap-12 w-full">
+  <!-- Left: Greeting -->
+  <div class="w-full md:w-1/2 text-center md:text-left">
+    <h1 class="mb-5 text-4xl font-bold leading-tight md:text-4xl lg:text-6xl dark:text-white">
+      Hello, I'm {name}.
+    </h1>
+  </div>
+
+  <!-- Right: Description and carousel -->
+  <div id="helpyou" class="w-full md:w-1/2">
+    <p class="mb-6 text-base text-neutral-600 dark:text-neutral-400">
+      I'm a Fullstack Developer in Chile. <br class="hidden lg:block" />
+      I focus on Web Applications development with performance and scalability.
+    </p>
+    <h2 class="mb-2 font-semibold text-neutral-800 dark:text-neutral-200 text-2xl">
+      I can help you out with:
+    </h2>
+
+    <div class="py-2 relative h-8 overflow-hidden">
+      <div id="carousel" class="transition-transform duration-500 ease-in-out">
+        {
+          languages.map((language, index) => (
+            <div class="flex items-center gap-2 text-sm text-neutral-500 dark:text-neutral-400 h-8 whitespace-nowrap" data-index={index}>
+              <img
+                src={`https://cdn.simpleicons.org/${language}`}
+                alt={language}
+                class="w-4 h-4 flex-shrink-0"
+              />
+              <span>{language} Development</span>
+            </div>
+          ))
+        }
+
+        <div class="flex items-center gap-2 text-sm text-neutral-500 dark:text-neutral-400 h-8 whitespace-nowrap">
+          <img
+            src="https://cdn.simpleicons.org/docker"
+            alt="Docker"
+            class="w-4 h-4 flex-shrink-0"
+          />
+          <span>Dockerize your App</span>
+        </div>
+        <div class="flex items-center gap-2 text-sm text-neutral-500 dark:text-neutral-400 h-8 whitespace-nowrap">
+          <img
+            src="https://cdn.simpleicons.org/grafana"
+            alt="Grafana"
+            class="w-4 h-4 flex-shrink-0"
+          />
+          <span>Monitorize your App</span>
+        </div>
+        <div class="flex items-center gap-2 text-sm text-neutral-500 dark:text-neutral-400 h-8 whitespace-nowrap">
+          <img
+            src="https://cdn.simpleicons.org/github/githubactions/white"
+            alt="GitHub Actions"
+            class="w-4 h-4 flex-shrink-0"
+          />
+          <span>Deploy your App</span>
+        </div>
+        <div class="flex items-center gap-2 text-sm text-neutral-500 dark:text-neutral-400 h-8 whitespace-nowrap">
+          <span>and more...</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  function initCarousel() {
+    const carousel = document.getElementById('carousel');
+    if (!carousel) return;
+
+    const items = carousel.children;
+    const totalItems = items.length;
+    let currentIndex = 0;
+
+    function showItem(index) {
+      const translateY = -index * 32;
+      carousel.style.transform = `translateY(${translateY}px)`;
+    }
+
+    function nextItem() {
+      currentIndex = (currentIndex + 1) % totalItems;
+      showItem(currentIndex);
+    }
+
+    showItem(0);
+    setInterval(nextItem, 3000);
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initCarousel);
+  } else {
+    initCarousel();
+  }
+
+  document.addEventListener('astro:page-load', initCarousel);
+</script>

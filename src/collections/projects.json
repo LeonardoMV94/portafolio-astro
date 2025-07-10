@@ -1,74 +1,178 @@
 [
   {
+    "name": "aragon-astro",
+    "description": "Web con renderizado hibrido construida con Astro, optimizada para rendimiento y SEO. Desplegada en Netlify.",
+    "image": "/assets/images/projects/aragon-astro.png",
+    "url": "https://github.com/LeonardoMV94/aragon-astro",
+    "demo": "https://aragonltda.cl/",
+    "languages": [
+      "JavaScript",
+      "HTML5"
+    ],
+    "frameworks": [
+      "Astro",
+      "TailwindCSS",
+      "React"
+    ],
+    "technologies": [
+      "netlify"
+    ]
+  },
+  {
     "name": "link-shortener",
-    "description": "Acorta URLs con Cloudflare Workers, TypeScript, HonoJS, Astro y Vue.js, con analíticas integradas.",
+    "description": "Acorta URLs con Cloudflare Workers, TypeScript, HonoJS, Astro y Vue.js, con analíticas integradas y autenticación de usuarios con OAuth.",
     "image": "/assets/images/projects/link-shortener.png",
     "url": "https://github.com/LeonardoMV94/link-shortener",
-    "languages": ["TypeScript"],
-    "frameworks": ["Vue.js", "Astro"],
-    "technologies": ["Cloudflare Workers", "Hono", "TailwindCSS", "SQLite"]
+    "demo": "https://short.pctester.cl/",
+    "languages": [
+      "TypeScript"
+    ],
+    "frameworks": [
+      "Vue.js",
+      "Astro"
+    ],
+    "technologies": [
+      "Cloudflare Workers",
+      "Hono",
+      "TailwindCSS",
+      "SQLite"
+    ]
+  },
+  {
+    "name": "tasel-web-astro",
+    "description": "Web de Tasel spa. con renderizado hibrido y envio de formularios a correo.",
+    "image": "/assets/images/projects/tasel-web-ast.png",
+    "url": "https://github.com/LeonardoMV94/selta-web",
+    "demo": "https://taselchile.cl",
+    "languages": [
+      "Typescript",
+      "HTML5"
+    ],
+    "frameworks": [
+      "nuxt",
+      "TailwindCSS",
+      "vue"
+    ],
+    "technologies": [
+      "netlify"
+    ]
   },
   {
     "name": "express-textgeneration-huggingface-chatgpt-ollama",
     "description": "Micro‑servicio de generación de texto en TypeScript con Express, Docker y APIs de IA (Hugging Face, ChatGPT y Ollama).",
     "image": "/assets/images/projects/express-textgeneration-huggingface-chatgpt-ollama.png",
     "url": "https://github.com/LeonardoMV94/express-textgeneration-huggingface-chatgpt-ollama",
-    "languages": ["TypeScript"],
-    "frameworks": ["Express"],
-    "technologies": ["Docker", "Docker", "Hugging Face API", "OpenAI", "Ollama"]
+    "languages": [
+      "TypeScript"
+    ],
+    "frameworks": [
+      "Express"
+    ],
+    "technologies": [
+      "Docker",
+      "Docker",
+      "Hugging Face API",
+      "OpenAI",
+      "Ollama"
+    ]
   },
   {
     "name": "nest-whatsappwebjs",
     "description": "Bot de WhatsApp modular construido con NestJS y whatsapp‑web.js, ideal para automatización de mensajería.",
     "image": "/assets/images/projects/nest-whatsappwebjs.png",
     "url": "https://github.com/LeonardoMV94/nest-whatsappwebjs",
-    "languages": ["TypeScript", "JavaScript"],
-    "frameworks": ["NestJS"],
-    "technologies": ["whatsapp-web.js"]
+    "languages": [
+      "TypeScript",
+      "JavaScript"
+    ],
+    "frameworks": [
+      "NestJS"
+    ],
+    "technologies": [
+      "whatsapp-web.js"
+    ]
   },
   {
     "name": "webserver-express-rabbit-socketio",
     "description": "Backend en tiempo real en TypeScript que combina Express, RabbitMQ y Socket.IO para mensajería escalable.",
     "image": "/assets/images/projects/webserver-express-rabbit-socketio.png",
     "url": "https://github.com/LeonardoMV94/webserver-express-rabbit-socketio",
-    "languages": ["TypeScript"],
-    "frameworks": ["Express", "Socket.IO"],
-    "technologies": ["RabbitMQ"]
+    "languages": [
+      "TypeScript"
+    ],
+    "frameworks": [
+      "Express",
+      "Socket.IO"
+    ],
+    "technologies": [
+      "RabbitMQ"
+    ]
   },
   {
     "name": "otmaster-backend",
     "description": "API REST full‑stack con Node.js, MySQL y Sequelize, desplegada vía Docker Compose.",
     "image": "/assets/images/projects/otmaster-backend.png",
     "url": "https://github.com/LeonardoMV94/otmaster-backend",
-    "languages": ["JavaScript"],
-    "frameworks": ["Express"],
-    "technologies": ["MySQL", "PostgreSQL", "Sequelize", "Docker"]
+    "languages": [
+      "JavaScript"
+    ],
+    "frameworks": [
+      "Express"
+    ],
+    "technologies": [
+      "MySQL",
+      "PostgreSQL",
+      "Sequelize",
+      "Docker"
+    ]
   },
   {
     "name": "otmaster-frontend",
     "description": "Cliente desktop/web en Vue 3 + Quasar, integrado con Electron, Axios y Vuex4.",
     "image": "/assets/images/projects/otmaster-frontend.png",
     "url": "https://github.com/LeonardoMV94/otmaster-frontend",
-    "languages": ["JavaScript"],
-    "frameworks": ["Vue.js", "Quasar"],
-    "technologies": ["Electron", "Axios", "Vuex4"]
+    "languages": [
+      "JavaScript"
+    ],
+    "frameworks": [
+      "Vue.js",
+      "Quasar"
+    ],
+    "technologies": [
+      "Electron",
+      "Axios",
+      "Vuex4"
+    ]
   },
   {
     "name": "TimerApp-vue3-ts",
     "description": "App de escritorio en Vue 3 + Quasar + Electron, escrita en TypeScript, para gestión de temporizadores.",
     "image": "/assets/images/projects/TimerApp-vue3-ts.png",
     "url": "https://github.com/LeonardoMV94/TimerApp-vue3-ts",
-    "languages": ["TypeScript", "JavaScript"],
-    "frameworks": ["Vue.js", "Quasar"],
-    "technologies": ["Electron"]
+    "languages": [
+      "TypeScript",
+      "JavaScript"
+    ],
+    "frameworks": [
+      "Vue.js",
+      "Quasar"
+    ],
+    "technologies": [
+      "Electron"
+    ]
   },
   {
     "name": "medigest",
     "description": "Sistema de gestión médica con Express.js y plantillas Handlebars.",
     "image": "/assets/images/projects/medigest.png",
     "url": "https://github.com/LeonardoMV94/medigest",
-    "languages": ["JavaScript"],
-    "frameworks": ["Express", "Handlebars.js"],
+    "languages": [
+      "JavaScript"
+    ],
+    "frameworks": [
+      "Express",
+      "Handlebars.js"
+    ],
     "technologies": []
   },
   {
@@ -76,35 +180,49 @@
     "description": "API con Express.js, Handlebars, autenticación de usuarios y PostgreSQL, en contenedor Docker.",
     "image": "/assets/images/projects/express-hbs-auth.png",
     "url": "https://github.com/LeonardoMV94/express-hbs-auth",
-    "languages": ["JavaScript"],
-    "frameworks": ["Express", "Handlebars"],
-    "technologies": ["Docker", "PostgreSQL", "Sequelize"]
-  },
-  {
-    "name": "aragon-astro",
-    "description": "Web con renderizado hibrido construida con Astro, optimizada para rendimiento y SEO. Desplegada en Netlify.",
-    "image": "/assets/images/projects/aragon-astro.png",
-    "url": "https://github.com/LeonardoMV94/aragon-astro",
-    "languages": ["JavaScript", "HTML5"],
-    "frameworks": ["Astro","TailwindCSS","React"],
-    "technologies": ["netlify"]
+    "languages": [
+      "JavaScript"
+    ],
+    "frameworks": [
+      "Express",
+      "Handlebars"
+    ],
+    "technologies": [
+      "Docker",
+      "PostgreSQL",
+      "Sequelize"
+    ]
   },
   {
     "name": "nest-mega-backup-database",
     "description": "Servicio de backups automatizados de bases de datos, programado con NestJS.",
     "image": "/assets/images/projects/nest-mega-backup-database.png",
     "url": "https://github.com/LeonardoMV94/nest-mega-backup-database",
-    "languages": ["TypeScript"],
-    "frameworks": ["NestJS"],
-    "technologies": ["Cron Jobs"]
+    "languages": [
+      "TypeScript"
+    ],
+    "frameworks": [
+      "NestJS"
+    ],
+    "technologies": [
+      "Cron Jobs"
+    ]
   },
   {
     "name": "express-pg-transactions",
     "description": "Ejemplo avanzado de manejo de transacciones en PostgreSQL desde Express.js.",
     "image": "/assets/images/projects/express-pg-transactions.png",
     "url": "https://github.com/LeonardoMV94/express-pg-transactions",
-    "languages": ["JavaScript"],
-    "frameworks": ["Express"],
-    "technologies": ["PostgreSQL","Sequelize","Swagger"]
+    "languages": [
+      "JavaScript"
+    ],
+    "frameworks": [
+      "Express"
+    ],
+    "technologies": [
+      "PostgreSQL",
+      "Sequelize",
+      "Swagger"
+    ]
   }
 ]

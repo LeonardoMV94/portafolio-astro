@@ -2,7 +2,7 @@
 import projects from "../../collections/projects.json";
 import PageHeading from "../../components/page-heading.astro";
 import Layout from "../../layouts/main.astro";
-import GitHubStats from "../../components/github-stats.astro";
+import GitHubStats from "../../components/GithubStats.vue";
 import MarkdownContent from "../../components/markdown-content.astro";
 import { generateSlug } from "../../utils/slug";
 import {
@@ -13,6 +13,7 @@ import {
 } from "../../utils/github";
 import markdownit from "markdown-it";
 import { getIcon } from "../../utils/getIconFromCdn";
+import DemoCard from "../../components/demoCard.astro";
 
 export async function getStaticPaths() {
   const paths = [];
@@ -113,13 +114,13 @@ const repoName = extractRepoName(project.url);
     <!-- Project details -->
     <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
       <!-- Main content -->
-      <div class="lg:col-span-2 ">
+      <div class="lg:col-span-2">
         <div class="prose prose-neutral dark:prose-invert max-w-none">
           <!-- Project image -->
           <div class="grid grid-cols-2 gap-8">
             <div class="">
               <div
-                class="relative overflow-hidden  rounded-2xl border border-neutral-200 dark:border-neutral-800"
+                class="relative overflow-hidden rounded-2xl border border-neutral-200 dark:border-neutral-800"
               >
                 <img
                   transition:name={`project-${generateSlug(project.name)}`}
@@ -133,7 +134,7 @@ const repoName = extractRepoName(project.url);
                 />
               </div>
             </div>
-            
+
             <div>
               <h3
                 class="text-xl font-semibold text-neutral-900 dark:text-neutral-100 mb-4"
@@ -188,9 +189,7 @@ const repoName = extractRepoName(project.url);
           </div>
 
           {/* README Section */}
-          <div
-            class=" pt-8 border-t border-neutral-200 dark:border-neutral-800"
-          >
+          <div class="pt-8 border-t border-neutral-200 dark:border-neutral-800">
             <h3
               class="text-xl font-semibold text-neutral-900 dark:text-neutral-100 mb-6"
             >
@@ -237,13 +236,21 @@ const repoName = extractRepoName(project.url);
         </div>
       </div>
 
+      <!-- sidebar with demo url -->
+
       <!-- Sidebar with tech stack -->
       <div class="lg:col-span-1">
-        <div class="sticky top-8 space-y-6">
+        <div class="sticky top-24 space-y-6">
           {/* GitHub Stats */}
           {
             username && repoName && (
-              <GitHubStats username={username} repoName={repoName} />
+              <GitHubStats client:only="vue" username={username} repoName={repoName} />
+            )
+          }
+
+          {
+            project.demo && (
+             <DemoCard project={project} />
             )
           }
 
@@ -329,6 +336,7 @@ const repoName = extractRepoName(project.url);
                   </div>
                 )
               }
+
               <!-- {repoInfo && (
                   <div>
                     <h5 class="text-sm font-medium text-neutral-700 dark:text-neutral-300 mb-3">

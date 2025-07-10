@@ -1,23 +1,23 @@
 [
 	{
-		"dates": "June 2018 · Present",
-		"role": "Front-end Engineer",
-		"company": "Full Truck Alliance",
-		"description": "Responsible for customer service and CRM system front-end development.",
+		"dates": "June 2015 · Present",
+		"role": "Freelance Fullstack Developer and Support technician",
+		"company": "PCTester.cl",
+		"description": "Development web applications and support.",
 		"logo": "/assets/images/experiences/fta.ico"
 	},
 	{
-		"dates": "July 2015 · June 2018",
-		"role": "Front-end Engineer",
-		"company": "YOHO!",
-		"description": "Responsible for mobile front-end development of e-commerce platform.",
+		"dates": "June 2023 · October 2024",
+		"role": "Fullstack Developer",
+		"company": "Francisco Toso | Chilemat",
+		"description": "internal Erp development, DevOps and support.",
 		"logo": "/assets/images/experiences/yoho.ico"
 	},
 	{
-		"dates": "September 2014 · July 2015 ",
-		"role": "Node.JS Developer",
-		"company": "WuLian",
-		"description": "Intern, involved in the development of Internet of Things cloud systems.",
+		"dates": "September 2022 · May 2023 ",
+		"role": "Support technician",
+		"company": "San Damian de Molokai School",
+		"description": "Responsible for the maintenance of the school's computer network and the development of the school's website.",
 		"logo": "/assets/images/experiences/wulian.ico"
 	}
 ]

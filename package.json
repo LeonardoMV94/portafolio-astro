@@ -23,7 +23,9 @@
 	},
 	"packageManager": "pnpm@9.12.2",
 	"dependencies": {
+		"@astrojs/vue": "^5.1.0",
 		"markdown-it": "^14.1.0",
-		"marked": "^16.0.0"
+		"marked": "^16.0.0",
+		"vue": "^3.5.17"
 	}
 }
