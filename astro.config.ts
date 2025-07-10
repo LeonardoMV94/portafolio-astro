@@ -6,7 +6,7 @@ import vue from "@astrojs/vue";
 // https://astro.build/config
 export default defineConfig({
     integrations: [tailwind(), vue()],
-    site: "https://your-domain.com", // Replace with your actual domain
+    site: "https://portafolio.pctester.cl", // Replace with your actual domain
     build: {
         assets: "assets",
         
