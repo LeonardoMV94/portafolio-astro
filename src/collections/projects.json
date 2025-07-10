@@ -29,12 +29,14 @@
     ],
     "frameworks": [
       "Vue.js",
+      "Hono",
+      "TailwindCSS",
       "Astro"
     ],
     "technologies": [
       "Cloudflare Workers",
-      "Hono",
-      "TailwindCSS",
+     
+     
       "SQLite"
     ]
   },
@@ -42,7 +44,7 @@
     "name": "tasel-web-astro",
     "description": "Web de Tasel spa. con renderizado hibrido y envio de formularios a correo.",
     "image": "/assets/images/projects/tasel-web-ast.png",
-    "url": "https://github.com/LeonardoMV94/selta-web",
+    "url": "https://github.com/LeonardoMV94/SeltaChile",
     "demo": "https://taselchile.cl",
     "languages": [
       "Typescript",
@@ -51,7 +53,7 @@
     "frameworks": [
       "nuxt",
       "TailwindCSS",
-      "vue"
+      "vue.js"
     ],
     "technologies": [
       "netlify"
