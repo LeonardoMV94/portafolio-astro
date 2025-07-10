@@ -1,5 +1,5 @@
 ---
-import { getIcon } from "../utils/getIconFromCdn";
+import ItemDevelopment from "./ItemDevelopment.astro";
 
 const name = "Leonardo Muñoz";
 const languages = ["Vue.js", "Nestjs", "Node.js"];
@@ -14,53 +14,22 @@ const languages = ["Vue.js", "Nestjs", "Node.js"];
 
   <!-- Right: Description and carousel -->
   <div id="helpyou" class="w-full md:w-1/2">
-    <p class="mb-6 text-base text-neutral-600 dark:text-neutral-400">
-      I'm a Fullstack Developer in Chile. <br class="hidden lg:block" />
+    <p class="mb-6 text-base text-neutral-600 dark:text-neutral-400 text-center">
+      <!-- I'm a Fullstack Developer in Chile. <br class="hidden lg:block" /> -->
       I focus on Web Applications development with performance and scalability.
     </p>
-    <h2 class="mb-2 font-semibold text-neutral-800 dark:text-neutral-200 text-2xl">
+    <h2 class="mb-2 font-semibold text-neutral-800 dark:text-neutral-200 text-2xl flex justify-center">
       I can help you out with:
     </h2>
 
-    <div class="py-2 relative h-8 overflow-hidden">
-      <div id="carousel" class="transition-transform duration-500 ease-in-out">
-        {
-          languages.map((language, index) => (
-            <div class="flex items-center gap-2 text-sm text-neutral-500 dark:text-neutral-400 h-8 whitespace-nowrap" data-index={index}>
-              <img
-                src={`https://cdn.simpleicons.org/${language}`}
-                alt={language}
-                class="w-4 h-4 flex-shrink-0"
-              />
-              <span>{language} Development</span>
-            </div>
-          ))
-        }
-
-        <div class="flex items-center gap-2 text-sm text-neutral-500 dark:text-neutral-400 h-8 whitespace-nowrap">
-          <img
-            src="https://cdn.simpleicons.org/docker"
-            alt="Docker"
-            class="w-4 h-4 flex-shrink-0"
-          />
-          <span>Dockerize your App</span>
-        </div>
-        <div class="flex items-center gap-2 text-sm text-neutral-500 dark:text-neutral-400 h-8 whitespace-nowrap">
-          <img
-            src="https://cdn.simpleicons.org/grafana"
-            alt="Grafana"
-            class="w-4 h-4 flex-shrink-0"
-          />
-          <span>Monitorize your App</span>
-        </div>
-        <div class="flex items-center gap-2 text-sm text-neutral-500 dark:text-neutral-400 h-8 whitespace-nowrap">
-          <img
-            src="https://cdn.simpleicons.org/github/githubactions/white"
-            alt="GitHub Actions"
-            class="w-4 h-4 flex-shrink-0"
-          />
-          <span>Deploy your App</span>
-        </div>
+    <div class="py-2 relative h-8 overflow-hidden flex justify-center">
+      <div id="carousel" class="transition-transform duration-500 ease-in-out">        
+        <ItemDevelopment icon="vue.js" text="Frontend Development" />
+        <ItemDevelopment icon="nestjs" text="Backend Development" />
+        <ItemDevelopment icon="node.js" text="Node.js Development" />
+        <ItemDevelopment icon="docker" text="Dockerize your App" />
+        <ItemDevelopment icon="grafana" text="Monitorize your App" />
+        <ItemDevelopment icon="githubactions/white" text="Deploy your App" />
         <div class="flex items-center gap-2 text-sm text-neutral-500 dark:text-neutral-400 h-8 whitespace-nowrap">
           <span>and more...</span>
         </div>
@@ -89,7 +58,7 @@ const languages = ["Vue.js", "Nestjs", "Node.js"];
     }
 
     showItem(0);
-    setInterval(nextItem, 3000);
+    setInterval(nextItem, 2000);
   }
 
   if (document.readyState === 'loading') {
