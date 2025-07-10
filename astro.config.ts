@@ -9,7 +9,9 @@ export default defineConfig({
     site: "https://your-domain.com", // Replace with your actual domain
     build: {
         assets: "assets",
+        
     },
+    outDir: "docs",
     server: {
         port: 4321,
         host: true,
