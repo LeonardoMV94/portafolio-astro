@@ -1,5 +1,26 @@
 [
   {
+    "name": "ERP Tasel",
+    "description": "ERP Tasel, un sistema de gestión empresarial que permite gestionar operaciones internas. Desarrollado en mono-repo para compartir codigo entre modulos.",
+    "image": "/assets/images/projects/tasel-erp.png",
+    "url": "https://github.com/LeonardoMV94/tasel-erp",
+    "languages": [
+      "TypeScript"
+    ],
+    "frameworks": [
+      "NestJS",      
+      "quasar",
+      "vue-query"
+    ],
+    "technologies": [
+      "pnpm",
+      "prisma",
+      "PostgreSQL",
+      "Docker",
+      "GithubActions"
+    ]
+  },
+  {
     "name": "aragon-astro",
     "description": "Web con renderizado hibrido construida con Astro, optimizada para rendimiento y SEO. Desplegada en Netlify.",
     "image": "/assets/images/projects/aragon-astro.png",
