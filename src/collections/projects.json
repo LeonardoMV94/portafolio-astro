@@ -226,5 +226,21 @@
       "Sequelize",
       "Swagger"
     ]
+  },
+  {
+    "name": "driverred-appbuceo",
+    "description": "Aplicacion movil para el calculo de cédula de buceo.La aplicación incluye tablas de descompresión, cálculo de buceos repetitivos, seguimiento de inmersiones y recursos de emergencia. Con conexion a base de datos SQLite",
+    "image": "/assets/images/projects/driverred-appbuceo.png",
+    "url": "https://github.com/LeonardoMV94/AppBuceo",
+    "languages": [
+      "Kotlin"
+    ],
+    "frameworks": [
+      "Android"
+    ],
+    "technologies": [
+      "Android Studio",
+      "SQLite"
+    ]
   }
 ]

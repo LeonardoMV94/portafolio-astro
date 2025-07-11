@@ -147,43 +147,43 @@ const repoName = extractRepoName(project.url);
 
               <!-- Project URL -->
               <div class="mt-8">
-                <a
-                  href={project.url}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  class="inline-flex items-center px-6 py-3 bg-neutral-900 dark:bg-neutral-100 text-white dark:text-neutral-900 rounded-lg hover:bg-neutral-800 dark:hover:bg-neutral-200 transition-colors duration-200 font-medium"
+               {readmeContent ? (<a
+                href={project.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                class="inline-flex items-center px-6 py-3 bg-neutral-900 dark:bg-neutral-100 text-white dark:text-neutral-900 rounded-lg hover:bg-neutral-800 dark:hover:bg-neutral-200 transition-colors duration-200 font-medium"
+              >
+                <svg
+                  class="w-4 h-4 mr-2"
+                  viewBox="0 0 13 15"
+                  xmlns="http://www.w3.org/2000/svg"
                 >
-                  <svg
-                    class="w-4 h-4 mr-2"
-                    viewBox="0 0 13 15"
-                    xmlns="http://www.w3.org/2000/svg"
+                  <g
+                    stroke="none"
+                    stroke-width="1"
+                    fill="none"
+                    fill-rule="evenodd"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
                   >
                     <g
-                      stroke="none"
-                      stroke-width="1"
-                      fill="none"
-                      fill-rule="evenodd"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
+                      transform="translate(0.666667, 2.333333)"
+                      stroke="currentColor"
+                      stroke-width="2.4"
                     >
-                      <g
-                        transform="translate(0.666667, 2.333333)"
-                        stroke="currentColor"
-                        stroke-width="2.4"
-                      >
-                        <polyline
-                          points="5.33333333 0 10.8333333 5.5 5.33333333 11"
-                        ></polyline>
-                        <line
-                          x1="10.8333333"
-                          y1="5.5"
-                          x2="0.833333333"
-                          y2="5.16666667"></line>
-                      </g>
+                      <polyline
+                        points="5.33333333 0 10.8333333 5.5 5.33333333 11"
+                      ></polyline>
+                      <line
+                        x1="10.8333333"
+                        y1="5.5"
+                        x2="0.833333333"
+                        y2="5.16666667"></line>
                     </g>
-                  </svg>
-                  View Project
-                </a>
+                  </g>
+                </svg>
+                View Project
+              </a>) : (<p class="text-sm">Private code project.<br> Request access to view the code</p>)} 
               </div>
             </div>
           </div>
@@ -215,20 +215,16 @@ const repoName = extractRepoName(project.url);
                         d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"
                       />
                     </svg>
-                    <p class="text-sm">No README documentation available</p>
-                    <p class="text-xs mt-2">
-                      The project might not have a README.md file or it's not
-                      accessible
-                    </p>
+                    <p class="text-sm">Private code project, request access to view the code</p>
                   </div>
-                  <a
+                  {/* <a
                     href={project.url}
                     target="_blank"
                     rel="noopener noreferrer"
                     class="inline-flex items-center text-sm text-blue-600 dark:text-blue-400 hover:underline"
                   >
                     View project on GitHub →
-                  </a>
+                  </a> */}
                 </div>
               )
             }
