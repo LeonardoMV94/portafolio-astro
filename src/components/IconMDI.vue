@@ -12,14 +12,15 @@ const props = defineProps({
 const darkMode = ref(false)
 
 onMounted(() => {
-  const stored = localStorage.getItem('dark_mode')
-  darkMode.value = stored === 'true'
+  darkMode.value = document.documentElement.classList.contains('dark')
 
-  // Escuchar cambios entre pestañas
-  window.addEventListener('storage', (e) => {
-    if (e.key === 'dark_mode') {
-      darkMode.value = e.newValue === 'true'
-    }
+  const observer = new MutationObserver(() => {
+    darkMode.value = document.documentElement.classList.contains('dark')
+  })
+
+  observer.observe(document.documentElement, {
+    attributes: true,
+    attributeFilter: ['class'],
   })
 })
 </script>

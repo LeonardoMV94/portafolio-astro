@@ -1,6 +1,7 @@
 ---
 import { generateSlug } from "../utils/slug";
 import ButtonLink from "./ButtonLink.astro";
+import ImageProject from "./ImageProject.vue";
 
 const {
   name,
@@ -29,13 +30,39 @@ const {
   <span
     class="relative z-30 block duration-300 ease-out group-hover:-translate-x-1 group-hover:-translate-y-1"
   >
-    <img
+    <!-- <img
       transition:name={`project-${generateSlug(name)}`}
-      src={image}
+      id={`image-${generateSlug(name)}`}
+      data-base={image.replace(/\/(000|fff)$/, '')}
+      src={image.replace(/\/(000|fff)$/, '')}
       alt={name}
       loading="lazy"
       class="w-full h-auto rounded-lg aspect-1/1 object-cover"
-    />
+    /> -->
+    <!-- <script is:inline>
+      (() => {
+      const id = 'image-{{generateSlug(name)}}';
+      const img = document.getElementById(id);
+      const base = img?.dataset.base;
+      const updateSrc = () => {
+        const isDark = document.documentElement.classList.contains('dark');
+        console.log("isDark", base)
+        img.src = isDark ? base : `${base}/000`;
+      };
+
+      updateSrc(); // Ejecutar al montar
+
+      // Observar cambios en el <html class="...">
+      const observer = new MutationObserver(updateSrc);
+      observer.observe(document.documentElement, {
+        attributes: true,
+        attributeFilter: ['class'],
+      });
+    })();
+    </script> -->
+    <div transition:name={`project-${generateSlug(name)}`} class="contents">
+      <ImageProject client:only="vue" image={image} alt={name} />
+    </div>
 
     <div class="block w-full px-1 mb-1 sm:mt-3">
       <h3
@@ -111,7 +138,10 @@ const {
           >
             View Details →
           </a> -->
-          <ButtonLink link={`/projects/${generateSlug(name)}`} text="View details" />
+        <ButtonLink
+          link={`/projects/${generateSlug(name)}`}
+          text="View details"
+        />
       </div>
     </div>
   </span></a

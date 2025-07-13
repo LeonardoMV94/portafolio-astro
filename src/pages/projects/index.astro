@@ -23,7 +23,7 @@ import { getIcon } from '../../utils/getIconFromCdn';
             <Project
               name={project.name}
               description={project.description}
-              image={getIcon(project.frameworks[0] ?? project.languages[0])}              
+              image={`https://cdn.simpleicons.org/${project.frameworks[0] ?? project.languages[0]}`}              
               url={project.url}
               languages={project.languages}
               frameworks={project.frameworks}
