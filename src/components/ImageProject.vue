@@ -14,8 +14,6 @@ const darkMode = ref(localStorage.getItem('dark_mode') === 'true')
 
 const imageComputed = computed(() => {
   if(props.image.toLowerCase().includes('express')) {
-    console.log(props.image)
-    console.log(props.image + (darkMode.value ? '/fff' : '/000'))
     return props.image + (darkMode.value ? '/fff' : '/000')
   }
   return props.image

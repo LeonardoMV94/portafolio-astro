@@ -60,7 +60,7 @@ const {
       });
     })();
     </script> -->
-    <div transition:name={`project-${generateSlug(name)}`} class="contents">
+    <div transition:name={`image-${generateSlug(name)}`} transition:animate="slide"  class="contents">
       <ImageProject client:only="vue" image={image} alt={name} />
     </div>
 
@@ -140,7 +140,7 @@ const {
           </a> -->
         <ButtonLink
           link={`/projects/${generateSlug(name)}`}
-          text="View details"
+          text="View more"
         />
       </div>
     </div>

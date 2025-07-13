@@ -6,6 +6,10 @@ const props = defineProps({
   name: {
     type: String,
     required: true,
+  },
+  size: {
+    type: String,
+    default: '24',
   }
 })
 
@@ -26,7 +30,7 @@ onMounted(() => {
 </script>
 
 <template>
-  <Icon :icon="name" :class="'w-8 h-8 ' + (darkMode ? 'fill-white' : 'fill-black')" />
+  <Icon :icon="name" :class="'w-' + size + ' h-' + size + ' ' + (darkMode ? 'fill-white' : 'fill-black')" />
 <!-- <svg
       xmlns="http://www.w3.org/2000/svg"
       height="24px"

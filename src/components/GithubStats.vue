@@ -139,7 +139,7 @@ onMounted(async () => {
 </script>
 
 <template>
-  <div v-if="repoStats" class="bg-neutral-50 dark:bg-neutral-900 rounded-2xl p-6 border border-neutral-200 dark:border-neutral-800 mb-6">
+  <div v-if="repoStats" class="bg-neutral-50 dark:bg-neutral-900 rounded-2xl p-6 border border-neutral-200 dark:border-neutral-800 mt-6">
     <h4 class="text-lg font-semibold text-neutral-900 dark:text-neutral-100 mb-4">Repository Stats</h4>
     <div class="grid grid-cols-2 sm:grid-cols-4 gap-4">
       <div class="text-center">
