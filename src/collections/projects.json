@@ -9,12 +9,13 @@
     ],
     "frameworks": [
       "NestJS",      
-      "quasar",
-      "vue-query"
+      "quasar"
+      
     ],
     "technologies": [
       "pnpm",
       "prisma",
+      "react query",
       "PostgreSQL",
       "Docker",
       "GithubActions"

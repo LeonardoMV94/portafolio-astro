@@ -22,7 +22,7 @@ const languages = ["Vue.js", "Nestjs", "Node.js"];
       I can help you out with:
     </h2>
 
-    <div class="py-2 relative h-8 overflow-hidden flex justify-center">
+    <div class="py-2 relative h-12 overflow-hidden  flex justify-center">
       <div id="carousel" class="transition-transform duration-500 ease-in-out">        
         <ItemDevelopment icon="vue.js" text="Frontend Development" />
         <ItemDevelopment icon="nestjs" text="Backend Development" />
@@ -30,7 +30,7 @@ const languages = ["Vue.js", "Nestjs", "Node.js"];
         <ItemDevelopment icon="docker" text="Dockerize your App" />
         <ItemDevelopment icon="grafana" text="Monitorize your App" />
         <ItemDevelopment icon="githubactions/white" text="Deploy your App" />
-        <div class="flex items-center gap-2 text-sm text-neutral-500 dark:text-neutral-400 h-8 whitespace-nowrap">
+        <div class="flex items-center gap-2 text-neutral-500 dark:text-neutral-200 text-2xl h-8 whitespace-nowrap">
           <span>and more...</span>
         </div>
       </div>
@@ -48,7 +48,7 @@ const languages = ["Vue.js", "Nestjs", "Node.js"];
     let currentIndex = 0;
 
     function showItem(index) {
-      const translateY = -index * 32;
+      const translateY = -index * 48;
       carousel.style.transform = `translateY(${translateY}px)`;
     }
 
