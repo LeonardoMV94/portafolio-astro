@@ -206,18 +206,18 @@ const repoName = extractRepoName(project.url);
           {
             readmeContent && (
               <div class="bg-neutral-50 mb-6 dark:bg-neutral-900 rounded-2xl p-6 border border-neutral-200 dark:border-neutral-800">
-                <h4 class="text-lg font-semibold text-neutral-900 dark:text-neutral-100 mb-6">
-                  Project URL
+                <h4 class="text-lg font-semibold text-neutral-900 dark:text-neutral-100 mb-3">
+                  Repository
                 </h4>
                 <div class="flex items-center gap-2">
-                  <IconMDI client:only="vue" name="mdi:github" size="6" />
+                  <IconMDI client:only="vue" name="mdi:github" size="4" />
                   <a
                     href={project.url}
                     target="_blank"
                     rel="noopener noreferrer"
                     class="text-base dark:text-white hover:underline"
                   >
-                    {project.name} repository
+                    {project.name}
                   </a>
                 </div>
               </div>

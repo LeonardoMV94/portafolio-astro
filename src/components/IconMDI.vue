@@ -2,6 +2,8 @@
 import { ref, onMounted } from 'vue'
 import { Icon } from '@iconify/vue'
 
+// https://icon-sets.iconify.design/mdi/
+
 const props = defineProps({
   name: {
     type: String,
