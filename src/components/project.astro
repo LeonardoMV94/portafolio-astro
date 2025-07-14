@@ -39,27 +39,6 @@ const {
       loading="lazy"
       class="w-full h-auto rounded-lg aspect-1/1 object-cover"
     /> -->
-    <!-- <script is:inline>
-      (() => {
-      const id = 'image-{{generateSlug(name)}}';
-      const img = document.getElementById(id);
-      const base = img?.dataset.base;
-      const updateSrc = () => {
-        const isDark = document.documentElement.classList.contains('dark');
-        console.log("isDark", base)
-        img.src = isDark ? base : `${base}/000`;
-      };
-
-      updateSrc(); // Ejecutar al montar
-
-      // Observar cambios en el <html class="...">
-      const observer = new MutationObserver(updateSrc);
-      observer.observe(document.documentElement, {
-        attributes: true,
-        attributeFilter: ['class'],
-      });
-    })();
-    </script> -->
     <div transition:name={`image-${generateSlug(name)}`} transition:animate="slide"  class="contents">
       <ImageProject client:only="vue" image={image} alt={name} />
     </div>
@@ -140,7 +119,7 @@ const {
           </a> -->
         <ButtonLink
           link={`/projects/${generateSlug(name)}`}
-          text="View more"
+          text="more"
         />
       </div>
     </div>
