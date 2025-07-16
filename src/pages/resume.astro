@@ -1,8 +1,10 @@
 ---
 import experiences from "../collections/experiences.json";
 import AboutExperience from "../components/about-experience.astro";
+import IconMDI from "../components/IconMDI.vue";
 import PageHeading from "../components/page-heading.astro";
 import Layout from "../layouts/main.astro";
+import ButtonLink from '../components/ButtonLink.astro'
 
 const shortBio = "Back-end as a priority 🧑🏻‍💻, front-end at an amateur level 🤷🏻‍♂️, learning DevOps and born with Linux under my arm 🐧.";
 
@@ -13,7 +15,7 @@ const shortBio = "Back-end as a priority 🧑🏻‍💻, front-end at an amateu
     <PageHeading
       title="About Me"
       description="Hello 👋 I'm a frontend engineer from Nanjing, China. I'm passionate about building new products and learning new technology."
-    />
+    />    
 
     <img src="/assets/images/about.jpg" class="relative z-30 w-full my-10 rounded-xl" />
 
@@ -23,13 +25,22 @@ const shortBio = "Back-end as a priority 🧑🏻‍💻, front-end at an amateu
     >
       {shortBio}
     </p>
-
-    <h2
-      class="mt-5 mb-2 text-2xl font-bold lg:mt-10 sm:mt-6 dark:text-neutral-200"
+    
+    <div class="flex items-center justify-between pt-2 mt-10"> 
+      <h2
+      class="flex items-center text-2xl font-bold  dark:text-neutral-200"
     >
       Experience
     </h2>
-    <div class="px-5 py-10">
+      <ButtonLink 
+        link="/assets/pdf/CV-Leonardo-Munoz-Veloso-2025-dev.pdf" 
+        text="Download CV"
+        icon="mdi:arrow-down-thick"
+        openInNewTab={true}>
+    </div>
+    
+    
+    <div class="px-5 pt-10">
       {
         experiences.map((experience) => {
           return (
@@ -46,6 +57,8 @@ const shortBio = "Back-end as a priority 🧑🏻‍💻, front-end at an amateu
         })
       }
     </div>
+
+   
 
     <h2 class="mt-5 mb-2 text-2xl font-bold lg:mt-10 sm:mt-6 dark:text-neutral-200">Let's Connect</h2>
     <p

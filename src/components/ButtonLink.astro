@@ -1,7 +1,7 @@
 ---
 import IconMDI from "./IconMDI.vue";
 
-const { link, text, openInNewTab = false } = Astro.props;
+const { link, text, openInNewTab = false, icon = 'mdi:arrow-right-thick' } = Astro.props;
 ---
 
 <a
@@ -21,7 +21,7 @@ const { link, text, openInNewTab = false } = Astro.props;
   <p class="pr-2">
     {text}
   </p>
-    <IconMDI  client:only="vue" name="mdi:arrow-right-thick" size="4" />
+    <IconMDI  client:only="vue" name={icon} size="4" />
   
   <!-- <svg
     class="w-4 h-4 ml-2"
