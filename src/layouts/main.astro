@@ -34,6 +34,13 @@ const { title } = Astro.props;
     <script src="../assets/css/main.css"></script>
     <ClientRouter />
     <!-- <Fragment set:html={import.meta.env.HEADER_INJECT} /> -->
+    <!-- Cloudflare Web Analytics -->
+    <script
+      defer
+      src="https://static.cloudflareinsights.com/beacon.min.js"
+      data-cf-beacon='{"token": "4c53da2c98d744f58ca502697e97cb6a"}'
+    ></script>
+    <!-- End Cloudflare Web Analytics -->
   </head>
   <body class="antialiased bg-white dark:bg-neutral-950">
     <SquareLines />
@@ -42,15 +49,15 @@ const { title } = Astro.props;
     <Footer />
     <script src="../assets/js/main2.js"></script>
     <script is:inline>
-      window.addEventListener('astro:navigation-end', () => {
-        console.log('Navegación SPA terminada');
+      window.addEventListener("astro:navigation-end", () => {
+        console.log("Navegación SPA terminada");
         // scroll con offset aquí
       });
     </script>
     <script is:inline>
       window.addEventListener("astro:navigation-end", () => {
         console.log("SPA navigation finished");
-      })
+      });
 
       const OFFSET = 80;
 
@@ -71,13 +78,7 @@ const { title } = Astro.props;
         }
       });
     </script>
-    <!-- Cloudflare Web Analytics -->
-    <script 
-      defer 
-      src='https://static.cloudflareinsights.com/beacon.min.js' 
-      data-cf-beacon='{"token": "4c53da2c98d744f58ca502697e97cb6a"}'>
-    </script>
-    <!-- End Cloudflare Web Analytics -->
+
     <!-- <Fragment set:html={import.meta.env.FOOTER_INJECT} /> -->
   </body>
 </html>
