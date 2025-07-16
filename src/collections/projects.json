@@ -1,5 +1,22 @@
 [
   {
+    "name": "btc-daily-alert-n8n",
+    "description": "Automated system that retrieves Bitcoin price and sentiment, sending daily alerts via Telegram and email using NestJS, n8n, and Docker.",
+    "image": "/assets/images/projects/btc-daily-alert-n8.png",
+    "url": "https://github.com/LeonardoMV94/btc-daily-alert-n8n",
+    "languages": [
+      "TypeScript"
+    ],
+    "frameworks": [
+      "NestJS",
+      "n8n"
+    ],
+    "technologies": [
+      "Docker",
+      "NX"
+    ]
+  },
+  {
     "name": "ERP Tasel",
     "description": "ERP Tasel, un sistema de gestión empresarial que permite gestionar operaciones internas. Desarrollado en mono-repo para compartir codigo entre modulos.",
     "image": "/assets/images/projects/tasel-erp.png",

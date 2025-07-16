@@ -35,6 +35,12 @@ export const getIcon = (language: string) => {
   if (icon === 'vuex4') {
     return `https://cdn.simpleicons.org/shopee${colorIcon}`;
   }
+  if (icon === 'n8n') {
+    return `https://cdn.simpleicons.org/n8n${colorIcon}`
+  }
+  if (icon === 'nx') {
+    return `https://cdn.simpleicons.org/nx${colorIcon}`
+  }
   if (icon === 'handlebars.js') {
     return `https://cdn.simpleicons.org/handlebars.js${colorIcon}`;
   }
