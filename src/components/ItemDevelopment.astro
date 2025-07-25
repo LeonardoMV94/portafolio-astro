@@ -1,14 +1,12 @@
 ---
-import IconMDI from "./IconMDI.vue";
-
-const { icon, text } = Astro.props;
+const { icon, text, size = 4 } = Astro.props;
 ---
 
 <div class="flex items-center gap-2 text-2xl text-neutral-800 dark:text-neutral-200 h-12 whitespace-nowrap">
   <img
     src={`https://cdn.simpleicons.org/${icon}`}
     alt="language"
-    class="w-5 h-5 flex-shrink-0"
+    class={`w-${size} h-${size} flex-shrink-0`}
   />
-  <span class="text-lg font-medium">{text}</span>
+  <p class=" text-xl font-medium">{text}</p>
 </div>

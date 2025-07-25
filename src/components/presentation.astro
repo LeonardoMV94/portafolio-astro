@@ -2,7 +2,6 @@
 import ItemDevelopment from "./ItemDevelopment.astro";
 
 const name = "Leonardo Muñoz";
-const languages = ["Vue.js", "Nestjs", "Node.js"];
 ---
 <div class="flex flex-col md:flex-row items-center md:items-start justify-center gap-12 w-full">
   <!-- Left: Greeting -->
@@ -25,14 +24,14 @@ const languages = ["Vue.js", "Nestjs", "Node.js"];
 
     <div class="relative h-12 overflow-hidden  flex justify-center">
       <div id="carousel" class="transition-transform duration-500 ease-in-out">        
-        <ItemDevelopment icon="vue.js" text="Frontend Development" />
-        <ItemDevelopment icon="nestjs" text="Backend Development" />
-        <ItemDevelopment icon="node.js" text="Node.js Development" />
-        <ItemDevelopment icon="docker" text="Dockerize your App" />
-        <ItemDevelopment icon="grafana" text="Monitorize your App" />
-        <ItemDevelopment icon="githubactions" text="Deploy your App" />
-        <ItemDevelopment icon="n8n" text="Automate your workflows" />
-        <ItemDevelopment icon="selenium" text="Scrape your data" />
+        <ItemDevelopment size={6} icon="vue.js" text="Frontend Development" />
+        <ItemDevelopment size={6} icon="nestjs" text="Backend Development" />
+        <ItemDevelopment size={6} icon="node.js" text="Node.js Development" />
+        <ItemDevelopment size={6} icon="docker" text="Dockerize your App" />
+        <ItemDevelopment size={6} icon="grafana" text="Monitorize your App" />
+        <ItemDevelopment size={6} icon="githubactions" text="Deploy your App" />
+        <ItemDevelopment size={6} icon="n8n" text="Automate your workflows" />
+        <ItemDevelopment size={6} icon="selenium" text="Scrape your data" />
         <!-- <div class="gap-2 text-center text-neutral-500 dark:text-neutral-200 text-2xl h-8 whitespace-nowrap">
           <span>and more...</span>
         </div> -->
