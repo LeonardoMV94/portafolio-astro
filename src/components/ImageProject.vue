@@ -2,13 +2,13 @@
     <img
       :src="imageComputed"
       :alt="alt"
-      class="w-full h-auto rounded-lg aspect-1/1 object-cover"
+      :class="`w-${size} h-${size} rounded-lg aspect-1/1 object-cover`"
     />
   
 </template>
 
 <script setup>
-import { ref, onMounted, computed, watchEffect } from 'vue'
+import { ref, onMounted, computed } from 'vue'
 
 const darkMode = ref(localStorage.getItem('dark_mode') === 'true')
 
@@ -42,5 +42,9 @@ const props = defineProps({
     type: String,
     required: true,
   },
-});
+  size: {
+    type: String,
+    default: '6',
+  },
+})
 </script>

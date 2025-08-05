@@ -40,7 +40,7 @@ const {
       class="w-full h-auto rounded-lg aspect-1/1 object-cover"
     /> -->
     <div transition:name={`image-${generateSlug(name)}`} transition:animate="slide"  class="contents">
-      <ImageProject client:only="vue" image={image} alt={name} />
+      <ImageProject client:only="vue" image={image} alt={name} size="45" />
     </div>
 
     <div class="block w-full px-1 mb-1 sm:mt-3">

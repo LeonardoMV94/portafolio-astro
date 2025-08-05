@@ -1,0 +1,94 @@
+---
+import { generateSlug } from "../utils/slug";
+import ButtonLink from "./ButtonLink.astro";
+import ImageProject from "./ImageProject.vue";
+import IconArrow from "./icons/IconArrow.astro";
+
+const {
+  name,
+  description,
+  url,
+  image,
+  screenshot,
+  languages = [],
+  frameworks = [],
+  technologies = [],
+} = Astro.props;
+---
+
+<a
+  id={`indice-${generateSlug(name)}`}
+  href={`/projects/${generateSlug(name)}`}
+  class="relative flex flex-col items-stretch duration-300 ease-out px-7 py-4 sm:p-3 group h-100 rounded-2xl"
+>
+  <!-- Borders and background layers -->
+  <span
+    class="absolute inset-0 z-20 block w-full h-full duration-300 ease-out bg-transparent border border-transparent border-dashed group-hover:-translate-x-1 group-hover:-translate-y-1 group-hover:border group-hover:border-neutral-300 dark:group-hover:border-neutral-600 group-hover:bg-white dark:group-hover:bg-neutral-950 rounded-2xl"
+  ></span>
+  <span
+    class="absolute inset-0 z-10 block w-full h-full duration-300 ease-out border border-dashed rounded-2xl border-neutral-300 dark:border-neutral-600 group-hover:translate-x-1 group-hover:translate-y-1"
+  ></span>
+
+  <span
+    class="relative z-30 block duration-300 ease-out group-hover:-translate-x-1 group-hover:-translate-y-1"
+  >
+    <div
+      transition:name={`image-${generateSlug(name)}`}
+      transition:animate="slide"
+      class="contents"
+    >
+      {
+        screenshot && (
+          <img
+            transition:name={`project-${generateSlug(name)}`}
+            id={`image-${generateSlug(name)}`}
+            data-base={image.replace(/\/(000|fff)$/, "")}
+            src={screenshot}
+            alt={name}
+            loading="lazy"
+            class="w-full h-[250px] rounded-lg aspect-1/2 object-cover"
+          />
+        )
+      }
+      <!-- <ImageProject client:only="vue" image={image} alt={name} /> -->
+    </div>
+
+    <div class="block w-full px-1 mb-1 sm:mt-3">
+      <h3
+        class="flex items-center text-base font-semibold tracking-tight text-neutral-900 dark:text-neutral-100 mb-1"
+      >
+        <ImageProject client:only="vue" image={image} alt={name} size="4" />
+        <span transition:name={`title-${generateSlug(name)}`} class="ml-2">{name}</span>
+        <IconArrow />
+      </h3>
+      <p class="text-sm text-neutral-600 dark:text-neutral-400 mb-3 truncate">
+        {description}
+      </p>
+
+      <!-- Tech lists with safe defaults -->
+      <!-- <div class="text-xs space-y-1 mb-1">
+        {
+          languages.length > 0 && (
+            <p>
+              <strong>Languages:</strong> {languages.join(", ")}
+            </p>
+          )
+        }
+        {
+          frameworks.length > 0 && (
+            <p>
+              <strong>Frameworks:</strong> {frameworks.join(", ")}
+            </p>
+          )
+        }
+        {
+          technologies.length > 0 && (
+            <p>
+              <strong>Tech:</strong> {technologies.join(", ")}
+            </p>
+          )
+        }
+      </div> -->
+    </div>
+  </span></a
+>
