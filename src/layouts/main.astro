@@ -47,7 +47,7 @@ const { title } = Astro.props;
     <Header />
     <slot />
     <Footer />
-    <script is:inline src="/js/main2.js"></script>
+    <script src="../assets/js/main2.js"></script>
     <script is:inline>
       window.addEventListener("astro:navigation-end", () => {
         console.log("Navegación SPA terminada");
