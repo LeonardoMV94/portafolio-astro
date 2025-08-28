@@ -1,0 +1,95 @@
+---
+interface Props {
+  allLanguages: string[];
+  allFrameworks: string[];
+  allTechnologies: string[];
+}
+
+const { allLanguages, allFrameworks, allTechnologies } = Astro.props;
+---
+
+<div class="mb-8">
+  <h3 class="mb-4 text-lg font-semibold text-neutral-900 dark:text-neutral-100">
+    Filtrar por tecnología
+  </h3>
+  
+  <div class="flex flex-wrap gap-2">
+    <!-- All projects button -->
+    <button
+      id="filter-all"
+      class="filter-btn active px-3 py-1 text-sm font-medium rounded-full transition-all duration-200 border-2 bg-indigo-600 text-white border-indigo-600"
+      data-filter="all"
+    >
+      Todos
+    </button>
+    
+    <!-- Language filters -->
+    {
+      allLanguages.map((language) => (
+        <button
+          id={`filter-${language.toLowerCase().replace(/\s+/g, '-')}`}
+          class="filter-btn px-3 py-1 text-sm font-medium rounded-full transition-all duration-200 border-2 border-neutral-300 dark:border-neutral-600 text-neutral-700 dark:text-neutral-300 hover:bg-neutral-100 dark:hover:bg-neutral-800"
+          data-filter="language"
+          data-value={language}
+        >
+          {language}
+        </button>
+      ))
+    }
+    
+    <!-- Framework filters -->
+    {
+      allFrameworks.map((framework) => (
+        <button
+          id={`filter-${framework.toLowerCase().replace(/\s+/g, '-')}`}
+          class="filter-btn px-3 py-1 text-sm font-medium rounded-full transition-all duration-200 border-2 border-neutral-300 dark:border-neutral-600 text-neutral-700 dark:text-neutral-300 hover:bg-neutral-100 dark:hover:bg-neutral-800"
+          data-filter="framework"
+          data-value={framework}
+        >
+          {framework}
+        </button>
+      ))
+    }
+    
+    <!-- Technology filters -->
+    {
+      allTechnologies.map((technology) => (
+        <button
+          id={`filter-${technology.toLowerCase().replace(/\s+/g, '-')}`}
+          class="filter-btn px-3 py-1 text-sm font-medium rounded-full transition-all duration-200 border-2 border-neutral-300 dark:border-neutral-600 text-neutral-700 dark:text-neutral-300 hover:bg-neutral-100 dark:hover:bg-neutral-800"
+          data-filter="technology"
+          data-value={technology}
+        >
+          {technology}
+        </button>
+      ))
+    }
+  </div>
+</div>
+
+<style>
+  .animate-fade-in {
+    animation: fadeIn 0.3s ease-in-out;
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .filter-btn.active {
+    background-color: rgb(79 70 229);
+    color: white;
+    border-color: rgb(79 70 229);
+  }
+
+  .filter-btn.active:hover {
+    background-color: rgb(67 56 202);
+  }
+</style>

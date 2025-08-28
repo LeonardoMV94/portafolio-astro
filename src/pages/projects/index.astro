@@ -3,8 +3,13 @@ import projects from '../../collections/projects.json';
 import GithubUserData from '../../components/GithubUserData.vue';
 import PageHeading from '../../components/page-heading.astro';
 import Project from '../../components/project.astro';
+import ProjectFilters from '../../components/project-filters.astro';
 import Layout from '../../layouts/main.astro';
-import { getIcon } from '../../utils/getIconFromCdn';
+
+// Generate unique lists for filtering
+const allLanguages = [...new Set(projects.flatMap(project => project.languages))].sort();
+const allFrameworks = [...new Set(projects.flatMap(project => project.frameworks))].sort();
+const allTechnologies = [...new Set(projects.flatMap(project => project.technologies))].sort();
 
 ---
 
@@ -16,6 +21,12 @@ import { getIcon } from '../../utils/getIconFromCdn';
     />
 
     <GithubUserData client:only="vue" />
+
+    <ProjectFilters 
+      allLanguages={allLanguages}
+      allFrameworks={allFrameworks}
+      allTechnologies={allTechnologies}
+    />
 
     <div
       class="z-50 grid items-stretch w-full grid-cols-1 my-8 gap-7 sm:gap-5 sm:grid-cols-2"
